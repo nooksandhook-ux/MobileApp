@@ -30,9 +30,7 @@ cp .env.example .env
 Edit `.env` and set your MongoDB connection:
 
 ```env
-MONGO_URI=mongodb://localhost:27017/hooks_mobile
 # Or for MongoDB Atlas:
-# MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/hooks_mobile
 ```
 
 ### Step 3: Initialize Database
@@ -142,7 +140,6 @@ curl -X POST http://localhost:5000/api/hook/timers/start \
 
 3. **Use in .env**
    ```env
-   MONGO_URI=mongodb://localhost:27017/hooks_mobile
    ```
 
 ### Option B: MongoDB Atlas (Cloud - Free)
@@ -169,7 +166,6 @@ curl -X POST http://localhost:5000/api/hook/timers/start \
 
 5. **Use in .env**
    ```env
-   MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/hooks_mobile?retryWrites=true&w=majority
    ```
 
 ## Default Credentials
@@ -304,3 +300,4 @@ If all checks pass, you're ready to go! 🚀
 ---
 
 **Happy coding!**
+
