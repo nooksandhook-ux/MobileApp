@@ -69,6 +69,16 @@ def create_app():
     # Store mongo instance in app
     app.mongo = mongo
 
+    # Root endpoint for health checks
+    @app.route('/')
+    def root():
+        return jsonify({
+            'status': 'online',
+            'message': 'Hooks Mobile API',
+            'version': '1.0',
+            'health_endpoint': '/api/health'
+        })
+    
     # Health check endpoint
     @app.route('/api/health')
     def health_check():
